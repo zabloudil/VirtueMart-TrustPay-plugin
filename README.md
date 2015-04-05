@@ -1,2 +1,5 @@
 # VirtueMart-TrustPay-plugin
-TrustPay payment method
+ 
+ Online platby TrustPay pre VirtueMart. Plugin je iba v slovenskom jazyku.
+
+
