@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="vmpayment">
+	<name>VM TrustPay</name>
+	<author></author>
+	<creationDate>May 2013</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>VM TrustPay</description>
+	<files>
+		<filename plugin="trustpay">trustpay.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+	</languages>
+  <params addpath="/administrator/components/com_virtuemart/elements">
+    	<param	name="payment_logos" type="vmfiles" label="Logo"
+             	description="Logo"
+             	directory="/images/stories/virtuemart/payment"
+             	default="default" hide_default="1" hide_none="1"
+             	stripext="0"  exclude="^_" />
+              
+      <param type="text" name="aid"  size="50" label="AID"
+             default="..." description="Merchant account ID or ID of account assigned by TrustPay" />
+
+      <param type="text" name="key"  size="50" label="KEY"
+             default="..." description="Key obtained from TrustPay" />
+             
+      <param name="env" type="radio" default="T" label="VMPAYMENT_TRUSTPAY_ENVIRONMENT" description="VMPAYMENT_TRUSTPAY_ENVIRONMENT">
+	     <option value="T">Test</option>
+	     <option value="L">Live</option>
+	    </param>
+      
+      <!-- BY DEFAULT paypal currency= vendor currency -->
+	<param name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_TRUSTPAY_CURRENCY" description="VMPAYMENT_TRUSTPAY_CURRENCY_DESC" />
+      
+  </params>
+</extension>
